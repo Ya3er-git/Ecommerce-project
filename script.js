@@ -8,7 +8,7 @@ const closeSidebarAndBackDrop = () => {
     console.log("hi i get clicked");
     nav.classList.remove("active");
     backDrop.classList.add("back-drop-hide");
-    body.style.overflow = "auto"; // Allow scroll again
+    body.style.overflow = "auto"; 
 };
 
 if (close) {
@@ -24,7 +24,7 @@ if (bar) {
     bar.addEventListener("click", () => {
         nav.classList.add("active");
         backDrop.classList.remove("back-drop-hide");
-        body.style.overflow = "hidden"; // Disable scroll
+        body.style.overflow = "hidden"; 
     });
 }
 
