@@ -118,20 +118,39 @@ body  {
     transition:0.3 ease-in ;
 }
 
-#navbar li a:hover,
-#navbar li a.active {
-    color: #09978e;
+#navbar li a {
+    position: relative;
+    transition: color 0.3s ease;
+    overflow: hidden;
 }
 
-#navbar li a.active::after,
-#navbar li a:hover::after {
+#navbar li a:hover,
+#navbar li a.active {
+    color: #0ab3a2;
+}
+
+#navbar li a::after {
     content: "";
-    width: 30%;
-    height: 2px;
     position: absolute;
     bottom: -4px;
-    left: 20px;
-    background: #088178;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #0ab3a2;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+    transform: scaleX(1);
+}
+
+#navbar li a:hover::after,
+#navbar li a.active::after {
+    width: 100%;
 }
 
 #mobile {
@@ -555,6 +574,9 @@ footer .copyright {
  
 
 @media (max-width: 799px) {
+    .section-p1 {
+        padding: 40px 40px;
+    }
     #navbar {
         display: flex;
         flex-direction: column;
@@ -611,6 +633,7 @@ footer .copyright {
 
 #close {
     position: absolute;
+    display: initials;
     top: 30px;
     left: 30px;
     color: #222;
@@ -620,8 +643,120 @@ footer .copyright {
     display: none;
 }
 
+#hero {
+    height: 70vh;
+    padding: 0 80px;
+    background-position: top 30% right 30%w;
 }
 
+#feature {
+    justify-content: center;
+}
+
+#feature .fe-box {
+    margin: 15px 15px;
+}
+
+#product1 .pro-container {
+    justify-content: center;
+}
+
+#product1 .pro {
+    margin: 15px;
+}
+
+#banner {
+    height: 20vh;
+}
+
+#sm-banner .banner-box {
+    min-width: 100%;
+    height: 30vh;
+}
+
+#banner3 {
+    padding: 0 40px;
+}
+
+#banner3 .banner-box {
+    width: 28%;
+}
+
+#newsletter .form {
+    width: 70%;
+}
+}
 .back-drop-hide {
     display: none;
+}
+
+@media (max-width: 477px) {
+    #section-p1  {
+        padding: 20px;
+    }
+#header {
+    padding: 10px 30px;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+#hero {
+    padding: 0 20px;
+    background-position: 70%;
+}
+
+#feature {
+    justify-content: space-between;
+}
+
+#feature .fe-box {
+    width: 155px;
+    margin: 0 0 15px 0;
+}
+
+#product1 .pro {
+    width: 100%;
+}
+
+#banner {
+    height: 40vh;
+}
+
+#banner h2 {
+    font-size:20px ;
+}
+
+#sm-banner .banner-box {
+    height:40vh ;
+}
+
+#sm-banner .banner-box2 {
+    margin-top: 20px;
+}
+
+#banner3 {
+    padding: 0 20px;
+}
+
+#banner3 .banner-box {
+    width:100% ;
+}
+
+#newsletter {
+    padding: 40px 20px;
+}
+
+#newsletter .form {
+    width: 100%s;
+}
+
+footer .copyright {
+    text-align: start;
+}
 }
