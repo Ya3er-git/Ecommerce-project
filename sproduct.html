@@ -213,6 +213,37 @@
                 <p> &copy; 2021, Tech2 etc -HTML CSS Ecommerce Template</p>
             </div>
         </footer>
+
+
+      <!-- <script>
+    var mainImg = document.getElementById("mainImg");
+    var smallImg = document.getElementsByClassName("small-img");
+
+    smallImg[0].onclick = function() {
+        mainImg.src = smallImg[0].src;
+    }
+    smallImg[1].onclick = function() {
+        mainImg.src = smallImg[1].src;
+    }
+    smallImg[2].onclick = function() {
+        mainImg.src = smallImg[2].src;
+    }
+    smallImg[3].onclick = function() {
+        mainImg.src = smallImg[3].src;
+    }
+</script> -->
+
+<script>
+    var mainImg = document.getElementById("mainImg");
+    var smallImg = document.getElementsByClassName("small-img");
+
+    // Convert HTMLCollection to an array
+    Array.from(smallImg).forEach(function(img) {
+        img.onclick = function() {
+            mainImg.src = this.src;
+        };
+    });
+</script>
     
      
     <script src="script.js"></script>
