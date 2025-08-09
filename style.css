@@ -777,7 +777,6 @@ footer .copyright {
 
 #about-head div {
     padding-left: 40px;
-
 }
 
 #about-app {
@@ -1044,6 +1043,34 @@ footer .copyright {
 
 #page-header.blog-header h2 {
     font-size: 38px;
+}
+
+/* about us page */
+
+#about-head {
+    flex-direction: column;
+}
+
+#about-head {
+    display: flex;
+    align-items: center;
+}
+
+#about-head img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+#about-head div {
+    padding-left: 0px;
+}
+
+#about-app .video {
+    width: 100%;
+}
+
+#about-app h1{
+    font-size: 30px;
 }
 
 }
